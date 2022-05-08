@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Passenger stats</title>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <table>
+  <tr>
+    <th>Passenger names</th>
+    <th>Vehicle</th>
+    <th>Total distance</th>
+  </tr>
+      {% for journey in journeys %}
+  <tr>
+      {% for passenger in journey.passengers.all %}
+    <td>{{ passenger }}</td>
+      {% endfor %}
+    <td>{{ journey.vehicle.reg_num }} ({{ journey.vehicle.name }})</td>
+    <td>{{ journey.distance }} kilometers</td>
+  </tr>
+      {% endfor %}
+</table>
+</body>
+</html>

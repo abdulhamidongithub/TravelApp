@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle stats</title>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <table>
+  <tr>
+    <th>Vehicle name</th>
+    <th>Reg. number</th>
+    <th>Total distance</th>
+  </tr>
+      {% for vehicle in vehicles %}
+  <tr>
+    <td>{{ vehicle.name }}</td>
+    <td>{{ vehicle.reg_num }}</td>
+    <td>{{ vehicle.total_distance }} kilometers</td>
+  </tr>
+      {% endfor %}
+</table>
+</body>
+</html>
